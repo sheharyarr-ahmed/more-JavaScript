@@ -75,3 +75,20 @@ console.log(restaurant.order(3, 0));
 // here what we did is that we destruct the array in which the names of the item of starter and main is now assigned to separate variables
 const [choosenStarter, choosenMain] = restaurant.order(3, 0);
 console.log(choosenStarter, choosenMain);
+
+// nested arrays
+const nestedArray = [1, 2, 3, [3, 2, 1]];
+// const [h, , l, o] = nestedArray; // the missing place between commas tells that we are ignoring the element present on index 1
+// console.log(h);
+
+// now what we want is that we want to assign separate variables to each element including the elements of that nested array as well this is called destructuring inside destructuring
+const [q, , w, [e, r, t]] = nestedArray;
+console.log(q, w, e, r, t);
+
+// we can set default values as well to the variables while destructirng array it can help when we declare more number of variables than the number of elements of an array
+// for example
+const arrX = [2, 3, 4];
+// const [j, k, l, m] = arrX;
+// console.log(j, k, l, m); //the output is 2 3 4 undefined this undefined shows the value of m variable so in order to stay away from this undefined we set deafult values to the variables like this in this way the value of m will become 1 while other variables do have correspondig elements in the arrX so they will not be assigned these default values except m
+const [j = 1, k = 1, l = 1, m = 1] = arrX;
+console.log(j, k, l, m);
