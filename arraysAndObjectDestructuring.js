@@ -92,3 +92,13 @@ const arrX = [2, 3, 4];
 // console.log(j, k, l, m); //the output is 2 3 4 undefined this undefined shows the value of m variable so in order to stay away from this undefined we set deafult values to the variables like this in this way the value of m will become 1 while other variables do have correspondig elements in the arrX so they will not be assigned these default values except m
 const [j = 1, k = 1, l = 1, m = 1] = arrX;
 console.log(j, k, l, m);
+
+// now its time to learn that how do we destructure the objects into separate objects
+const { name, categories, openingHours } = restaurant;
+const {
+  name: restaurantName,
+  categories: categoriesType,
+  openingHours: hours,
+} = restaurant;
+
+console.log(hours);
