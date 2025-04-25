@@ -94,11 +94,41 @@ const [j = 1, k = 1, l = 1, m = 1] = arrX;
 console.log(j, k, l, m);
 
 // now its time to learn that how do we destructure the objects into separate objects
-const { name, categories, openingHours } = restaurant;
+// what we have to do first is that first create an object of those properties of objects whom we want to assign separate variables of the object then make another object and then assign the names of those  separate variables
+const { name, categories, openingHours } = restaurant; //selecting the properties of the object restaurant which will become our separate variabels to destruct
 const {
+  //assinging names to those variables
   name: restaurantName,
   categories: categoriesType,
   openingHours: hours,
 } = restaurant;
 
-console.log(hours);
+console.log(restaurantName, hours, categoriesType);
+
+// seting default values to the properties if they do not exist
+// what we doing in the next line first we add/select the property which does no exist in the restaurant object so we set an default value to it if in case it is called sometimes so as an output the default will be displayed and for the other property location we first select the property location then rename it to cityLocation all in one line and then also assign it with an default value
+const { reviews = [], location: cityLocation = [] } = restaurant;
+console.log(reviews, cityLocation);
+
+// here we see the concept of mutating variables of the object so what we did first we cretae existing new h,v variables then after this an object named as obj67 created which have same properties h and v which were the name of our variables and then we mutate(changing the values of the variables) the variables without again declaring them so for that
+let h = 1277;
+let n = 65;
+const obj67 = {
+  h: "hiroshima",
+  n: "nagasaki",
+};
+// we have to enclose them into parenthesis
+({ h, n } = obj67);
+console.log(h, n);
+
+// destructuring nested objects
+// what really is happening here is that we first select an property openingHours which was renamed to hours on object restaurant then what we did this hours property itself is an object inside whose property fri is again is an object which has properties open close so what we did we select property fri of object hours then select property open and close of fri and renamed those properties to o and c
+// console.log(hours);
+// const { //first we select them
+//   fri: { open, close },
+// } = hours;
+const {
+  fri: { open: o, close: c },
+} = hours;
+
+console.log(o, c);
