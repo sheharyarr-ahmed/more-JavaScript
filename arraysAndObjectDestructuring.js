@@ -48,7 +48,30 @@ const restaurant = {
   order: function (starterItem, mainItem) {
     return [restaurant.starterMenu[starterItem], restaurant.mainMenu[mainItem]];
   },
+
+  orderDelivery: function ({
+    //this is example of nested objects destructuirng and howit can used in an function which have multiple parameters.
+    //a function in which i am passing an object as an arguemnt and that object should contain these keys because we will be selecting them through deconstructing and then through deconstructing we will select those properties of the object and then they will be extracted as variabels when fucntion is invoked
+    main,
+    starter,
+    address,
+    starterIndex,
+    mainIndex,
+  }) {
+    console.log(
+      `your order of ${main} and ${starter} has been received and will be delivered to ${address} and for further taste you can add ${restaurant.starterMenu[starterIndex]} or ${restaurant.mainMenu[mainIndex]}`
+    );
+  },
 };
+
+restaurant.orderDelivery({
+  //this fucntion is for the concept of nested arrays destructuring and is used for invoking property orderDelivery of restaurant object before invoking and understanding this read this function's definition para first above in the restaurant object
+  main: "karahi",
+  starter: "mozarella-sticks",
+  address: "gari khata",
+  starterIndex: 2,
+  mainIndex: 2,
+});
 
 // destructuring of an array into single and separate variables
 const arr = [1, 2, 34, 5]; //there are four elements inside of this array
@@ -124,11 +147,11 @@ console.log(h, n);
 // destructuring nested objects
 // what really is happening here is that we first select an property openingHours which was renamed to hours on object restaurant then what we did this hours property itself is an object inside whose property fri is again is an object which has properties open close so what we did we select property fri of object hours then select property open and close of fri and renamed those properties to o and c
 // console.log(hours);
-// const { //first we select them
+// const { //first we select and now to destrtuct more meaning to destruct fri property we add :{} after firday and inside we mention the properties of fri obj
 //   fri: { open, close },
 // } = hours;
 const {
-  fri: { open: o, close: c },
+  fri: { open: o, close: c }, //renaming the property names open to o and close to c
 } = hours;
 
 console.log(o, c);
