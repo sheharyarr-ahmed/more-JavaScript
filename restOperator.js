@@ -61,3 +61,25 @@ console.log(item1, item2, unUsed);
 
 const { sat, ...weekDays } = restaurant.openingHours;
 console.log(sat, weekDays);
+
+// rest operator use in functions what happening is here the function is taking argument as an rest operator so if an variable which will be containing multiple number of elements will get packed into an array the loop will done the suma and give the output and if the arugment is an array so fisr we have to apply spread operator to that array and then it will get unoacked then fucntion will make it pack again it to an array.
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum = sum + numbers[i];
+  }
+  console.log(sum);
+};
+// input as an variable
+add(4, 2);
+
+// input as an array
+const c = [23, 45];
+add(...c);
+
+// rest operator used in an fucntion first item got stored in the item parameter wherea as other elements got packed in to an array due to spread operator
+const orderPizza = function (item, ...otherItems) {
+  console.log(item, otherItems);
+};
+
+orderPizza("onion", "pyaz", "pasta");
