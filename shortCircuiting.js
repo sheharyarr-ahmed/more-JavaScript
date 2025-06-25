@@ -71,3 +71,8 @@ const cars = restaurant.cars && "hello";
 console.log(cars);
 
 console.log(false && false && 0);
+
+// the concept of nullish operator
+const animals = 0;
+const petsShop = animals ?? "no animals found";
+console.log(petsShop);
