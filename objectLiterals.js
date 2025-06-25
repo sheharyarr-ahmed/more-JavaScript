@@ -12,6 +12,7 @@ const italianFoods = new Set([
   "garlic",
   "basil",
 ]);
+const days = ["mon", "tue", "wed", "thurs", "fri", "sat", "sun"];
 
 const mexicanFoods = new Set([
   "tortillas",
@@ -24,7 +25,7 @@ const mexicanFoods = new Set([
 
 // Data needed for first part of the section
 const openingHours = {
-  thu: {
+  [days[3]]: {
     open: 12,
     close: 22,
   },
@@ -49,3 +50,4 @@ const restaurant = {
 };
 
 console.log(restaurant);
+console.log(openingHours);
