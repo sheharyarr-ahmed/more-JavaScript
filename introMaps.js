@@ -66,3 +66,40 @@ console.log(mapsIntro.get(document.querySelector("h1")));
 console.log(mapsIntro);
 
 console.log(mapsIntro.size);
+
+// challenge of MAPS
+const cinemaHall = new Map();
+cinemaHall
+  .set("A1", true)
+  .set("A2", false)
+  .set("A3", true)
+  .set("A4", false)
+  .set("A5", false)
+  .set("B1", false)
+  .set("B2", true)
+  .set("B3", false)
+  .set("B4", false)
+  .set("B5", false);
+
+//   checking i fthe specific seat is available
+if (cinemaHall.get("B3") === true) {
+  console.log("this seat is occupied.");
+} else {
+  console.log("this seat is AVAILABLE");
+}
+
+// the number of seats available
+let availableSeats = 0;
+for (const [seats, available] of cinemaHall) {
+  if (!available) {
+    availableSeats++;
+  }
+}
+console.log(`the available seats are ${availableSeats}`);
+
+// the number of seats not available
+for (const [seats, notAvailable] of cinemaHall) {
+  if (notAvailable === true) {
+    console.log(`the seat ${seats} is not available`);
+  }
+}
