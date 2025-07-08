@@ -18,6 +18,7 @@ console.log(learningSets);
 console.log(learningSets.has("corolla"));
 console.log(learningSets.has("civic"));
 console.log(learningSets.size);
+// learningSets.clear(); //removes all the elements from the set
 
 // real life use case of sets
 const visitorIPs = [
