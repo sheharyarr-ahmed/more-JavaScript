@@ -28,6 +28,11 @@ mapsIntro
   .set("open", 8)
   .set("close", 23);
 
+// // other built in functions for maps in the java script
+// mapsName.delete();
+// mapsName.has();
+// mapsName.size();
+
 //retrieving the values from maps using get method
 console.log(mapsIntro.get(1));
 // console.log(mapsIntro.get(true));
