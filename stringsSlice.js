@@ -42,3 +42,41 @@ const checkValidComment = function (comment) {
 };
 
 checkValidComment("i am please");
+
+// some new more methods
+const senEx = "hello+look+at+me";
+const sentence = "hello iam iPhone";
+console.log(sentence.split(" ")); //what it does it looks for the word from which it will divide and place them into an array //
+console.log(senEx.split("+"));
+
+const naam = "Sheharyar Ahmed";
+const [firstName, lastName] = naam.split(" ");
+console.log(firstName);
+
+const wildAnimals = "tiger+lion+cheetah";
+const arrayWildAnimals = wildAnimals.split("+");
+console.log(arrayWildAnimals);
+const joinedAnimals = arrayWildAnimals.join("+");
+console.log(joinedAnimals);
+
+const [make, model] = "Toyota Corolla".split(" ");
+const newVariant = [
+  "Introducing".toUpperCase(),
+  make,
+  model.toUpperCase(),
+].join(" ");
+console.log(newVariant);
+
+// function to make names capitalise
+const nameCapitalise = function (name) {
+  const names = name.toLowerCase().split(" ");
+  const rightNames = [];
+
+  for (const n of names) {
+    rightNames.push(n[0].toUpperCase() + n.slice(1));
+  }
+  console.log(rightNames.join(" "));
+};
+
+nameCapitalise("saif khan");
+// nameCapitalise("saif HSBF");
