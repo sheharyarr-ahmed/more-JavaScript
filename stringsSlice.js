@@ -31,6 +31,10 @@ formatUserInfo("Sheharyar Ahmed", "887766");
 // replace;
 // toUpperCase;
 // toLowerCase;
+// split
+// join
+// replace
+// repeat
 
 const checkValidComment = function (comment) {
   const regularComment = comment.toLowerCase().trim();
@@ -73,10 +77,32 @@ const nameCapitalise = function (name) {
   const rightNames = [];
 
   for (const n of names) {
-    rightNames.push(n[0].toUpperCase() + n.slice(1));
+    // rightNames.push(n[0].toUpperCase() + n.slice(1));
+    rightNames.push(n[0].replace(n[0], n[0].toUpperCase()) + n.slice(1)); //  another way instead of using upper logic///
   }
   console.log(rightNames.join(" "));
 };
 
 nameCapitalise("saif khan");
 // nameCapitalise("saif HSBF");
+
+// credit card numbers masking funtion
+const creditMasking = function (number) {
+  const toString = number.toString();
+  const last4 = toString.slice(-4);
+  console.log(last4.padStart(toString.length, "*"));
+};
+creditMasking("123456789");
+
+// repeat method used
+const sen = "I am Sheharyar";
+
+console.log(sen.repeat(4));
+
+const repeatEx = function (n) {
+  console.log(
+    `there are ${n} and there are ${"😂".repeat(n)} in the sentences`
+  );
+};
+
+repeatEx(2);
