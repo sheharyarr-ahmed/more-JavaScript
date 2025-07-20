@@ -24,3 +24,21 @@ function formatUserInfo(fullName, cardNo) {
 }
 
 formatUserInfo("Sheharyar Ahmed", "887766");
+
+// some other methods of Strings
+// includes;
+// trim;
+// replace;
+// toUpperCase;
+// toLowerCase;
+
+const checkValidComment = function (comment) {
+  const regularComment = comment.toLowerCase().trim();
+  if (regularComment.includes("please") && regularComment.startsWith("hello")) {
+    console.log("this is an valid comment");
+  } else {
+    console.log("this is not an valid comment");
+  }
+};
+
+checkValidComment("i am please");
