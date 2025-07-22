@@ -22,3 +22,5 @@ console.log(airline);
 console.log(shery);
 
 // this function is an perfect exampple of difference between passing of primitives thorugh an functiona and passing of objects as an function
+
+// airline remained same but the name inside the shery obejct got changed when the shery object passed thorugh the function
