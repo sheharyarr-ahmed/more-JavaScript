@@ -23,6 +23,7 @@ transformer("hello i am fly jinnah", oneWord);
 
 transformer("hello i am fly jinnah", upperFirstWord);
 
+// another example
 const removeSpaces = function (str) {
   return `${str.trim().replace(/ /g, "-")}`;
 };
